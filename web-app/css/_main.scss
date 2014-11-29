@@ -13,7 +13,7 @@ a:link, a:visited {
 
 .main-head {
 	background: url('../img/tw_background.jpg') 50% 100% no-repeat;
-	padding: 3em 0 2em 0;
+	padding: 3em 0 8em 0;
 }
 .container {
 	max-width: 1280px;
@@ -46,10 +46,16 @@ a:link, a:visited {
 	padding-left: 2em;
 	padding-top: 2em;
 
-
 	.send-text {
 		background: white;
 		border-right: none;
+	}
+
+	.send-amount {
+		border-left: none !important;
+		-moz-box-shadow:    none;
+		-webkit-box-shadow: none;
+		box-shadow:         none;
 	}
 
 	select {
@@ -134,8 +140,8 @@ a:link, a:visited {
 .receive-main {
 	h1 {
 		text-align: center !important;
-		font-size: 3em;
-		padding: 0 20%;
+		font-size: 2.8em;
+		padding: 0 20% 1em;
 		line-height: 1.4em;
 	}
 	.receive-form {
