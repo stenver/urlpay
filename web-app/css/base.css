@@ -245,11 +245,9 @@ a:link, a:visited {
 .container {
   max-width: 1280px;
   margin: 0 auto; }
-  .container .header {
-    padding-bottom: 4em; }
-    .container .header .title {
-      font-size: 3em;
-      font-family: 'Open Sans', sans-serif; }
+  .container .header .title {
+    font-size: 3em;
+    font-family: 'Open Sans', sans-serif; }
 
 .main-left {
   width: 60%;
