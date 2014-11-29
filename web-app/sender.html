@@ -37,15 +37,18 @@
 
         <div class="block">
 
-          <label class="b-calculator__input-label" for="b-calculator__input-amount-send">Send</label>
-          <input name="sourceValue" class="b-calculator__input-amount" id="b-calculator__input-amount-send" value="1000">
-          <div class="b-calculator__input-currency">
-            <select name="sourceCurrencyId" class="b-calculator__input-currency-select sourceCurrency">
+          <div class="input-group">
+            <span class="input-group-addon">You send</span>
+            <input type="text" class="form-control">
+            <span class="input-group-addon">
+              
+              <select>
+                <option value="eur">EUR</option>
+                <option value="gbp">GBP</option>
+                <option value="sek">SEK</option>
+              </select>
 
-              <option value="2"
-                      selected="selected">€</option>
-
-            </select>
+            </span>
           </div>
 
         </div>
