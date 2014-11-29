@@ -1,16 +1,16 @@
 var app = angular.module('UrlPay');
 
 app.controller('SenderController', function ($scope, $http, SendService) {
+
   var getRandom = function () {
     var number = '' + Math.random();
-    var randomStr = number.substring(2, number.length);
-    return randomStr;
+    return number.substring(2, number.length);
   };
 
   $scope.transfer = {
     urlHash: getRandom(),
     amount: "",
-    senderCurrency: "eur",
+    senderCurrency: "EUR",
     country: "Estonia",
     firstName: "",
     lastName: "",
