@@ -1,6 +1,7 @@
-# Key business metrics
+# Business metrics
 * Total number of payments processed
 * Total sum of payments processed
+* Total fee margin % collected on payments
 * Number of distinct customers that have completed at least one payment
 
 
@@ -9,10 +10,10 @@
 
 ## Acquisition:
 ### Links to our product on Transferwise/ad websites
-* CTR (click-through ratio)				<--- CRITICAL METRIC
-* % of users converted to payments		<--- CRITICAL METRIC
+* CTR (click-through ratio)							<--- KEY VITALITY METRIC
+* % of received clicks converted to payments		<--- KEY VITALITY METRIC
 
-### Other sources
+### Other
 * % of returning users converted to payments
 
 
@@ -29,12 +30,19 @@
 ** receiver opened link
 ** receiver filled in payment details
 
+* Transfer delay: time between sender completing payment and receiver accepting payment
 
 
 
-## User satisfaction:
+
+## Customer satisfaction & marketing:
 ### Ease of use
 * % of users clicking "Get help" for each step in payment flow (incl link for receiving payment)
+* time between entering payment flow and receiving link
+* time between entering receiving flow and completing payment reception
 
 ### Virality
 * % of customers referring our product to someone else
+* % of users answering 9 or 10 to the question: how likely is it that you will recommend our product to other people, on a 1 to 10 scale?
+* % of users answering 1 or 2 to the question: how likely is it that you will recommend our product to other people, on a 1 to 10 scale?
+* % K-value: after one week, (# new users from referrals + # old users) / (# of old users)
