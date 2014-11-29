@@ -17,7 +17,8 @@ app.controller('SenderController', function ($scope, $http, SendService) {
 
         cardType: "",
         creditCardNumber: "",
-        securityCode: ""
+        securityCode: "",
+        senderTransfered: true
     };
 
     $scope.sendBtn = function () {
@@ -27,6 +28,7 @@ app.controller('SenderController', function ($scope, $http, SendService) {
                 amount: transfer.amount,
                 urlhash: transfer.urlhash,
                 receiverAccount: transfer.senderCurrency,
+                cardType: transfer.cardType,
                 country: transfer.country,
                 firstName: transfer.firstName,
                 lastName: transfer.lastName,

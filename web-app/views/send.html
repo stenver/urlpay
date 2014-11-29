@@ -23,7 +23,7 @@
               <span class="send-text input-group-addon">You send</span>
               <input type="text" name="amount" class="form-control" ng-model="transfer.amount">
             <span class="input-group-addon">
-              <select ng-model="transfer.currency">
+              <select ng-model="transfer.senderCurrency">
                 <option value="eur">EUR</option>
                 <option value="gbp">GBP</option>
                 <option value="sek">SEK</option>
@@ -69,11 +69,11 @@
 
                   <div class="form-group">
                     <label class="left" for="firstName">First name on card</label>
-                    <input type="text" class="form-control" id="firstName" ng-model="transfer.firstname" placeholder="First name on card">
+                    <input type="text" class="form-control" id="firstName" ng-model="transfer.firstName" placeholder="First name on card">
                   </div>
                   <div class="form-group">
                     <label class="left" for="LastName">Last name on card</label>
-                    <input type="text" class="form-control" id="LastName" ng-model="transfer.lastname" placeholder="Surname on card">
+                    <input type="text" class="form-control" id="LastName" ng-model="transfer.lastName" placeholder="Surname on card">
                   </div>
                   <div class="form-group">
                     <label class="left" for="cardNum" style="width: 100%;">Credit card</label>
