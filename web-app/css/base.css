@@ -241,8 +241,9 @@ textarea {
     .container .header .title {
       width: 40%; }
     .container .header .how-it-works {
-      width: 60%;
-      text-align: right; }
+      width: 55%;
+      text-align: right;
+      padding-top: 1em; }
 
 .main-left {
   width: 60%;
@@ -293,6 +294,9 @@ textarea {
   .main-right .payment-choice > li.active > a, .main-right .payment-choice > li.active > a:hover, .main-right .payment-choice > li.active > a:focus {
     color: white;
     background: green; }
+  .main-right .left {
+    float: left;
+    padding-top: 1em; }
   .main-right #creditCard, .main-right #bankTransfer {
     background: rgba(255, 255, 255, 0.5);
     border-radius: 4px;
