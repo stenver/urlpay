@@ -5,6 +5,7 @@ import grails.converters.JSON
 class TransferController {
 
     def send(){
+        println(request.JSON)
         Transfer transfer = new Transfer(request.JSON)
         transfer.save(flush: true, failOnError: true)
         render transfer as JSON

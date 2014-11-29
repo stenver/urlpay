@@ -10,12 +10,14 @@ app.controller('SenderController', function ($scope, $http, SendService) {
     $scope.transfer = {
         urlHash: getRandom(),
         amount: 1000,
-        currency: "eur",
+        senderCurrency: "eur",
         country: "Estonia",
-        firstname: "fdsafdsa",
-        lastname: 'lastfdsajlk',
-        creditCardNumber: "12321321231",
-        securityCode: '1234'
+        firstName: "",
+        lastName: "",
+
+        cardType: "",
+        creditCardNumber: "",
+        securityCode: ""
     };
 
     $scope.sendBtn = function () {
@@ -24,7 +26,10 @@ app.controller('SenderController', function ($scope, $http, SendService) {
             receiver: {
                 amount: transfer.amount,
                 urlhash: transfer.urlhash,
-                receiverAccount: transfer.receiverAccount,
+                receiverAccount: transfer.senderCurrency,
+                country: transfer.country,
+                firstName: transfer.firstName,
+                lastName: transfer.lastName,
                 currency: transfer.receiverCurrency
             }
         };
