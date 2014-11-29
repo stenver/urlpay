@@ -1,6 +1,6 @@
 var app = angular.module('UrlPay');
 
-app.controller('SenderController', function ($scope, $http, SendService) {
+app.controller('SenderController', function ($scope, $http, SendService, $window) {
 
   var getRandom = function () {
     var number = '' + Math.random();
@@ -24,6 +24,12 @@ app.controller('SenderController', function ($scope, $http, SendService) {
   $scope.getTransferUrl = function () {
     var domainUrl = "http://localhost:8080/app/sender.html#/receive/";
     return domainUrl + $scope.transfer.urlHash;
+  };
+
+  $scope.reloadPage = function() {
+    console.log("reloading page");
+    $window.location.reload();
+    //$state.go($state.current.name, $state.params, { reload: true });
   };
 
   $scope.sendBtn = function () {
