@@ -6,6 +6,7 @@
 
 
 
+
 # Operational metrics
 
 ## Acquisition:
@@ -14,7 +15,10 @@
 * % of received clicks converted to payments		<--- KEY VITALITY METRIC
 
 ### Other
+* average customer lifetime value
 * % of returning users converted to payments
+* % count fraudulent transfers
+* % sum fraudulent transfers						<--- KEY VITALITY METRIC
 
 
 
