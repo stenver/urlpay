@@ -11,14 +11,14 @@ app.controller('ReceiveController', function ($scope, $http, $location, $state) 
     });
 
   $scope.receive = function(transfer){
-    data = {
+    var data = {
       sender: {
         amount: transfer.amount,
         urlhash: transfer.urlhash,
         currency: transfer.senderCurrency
       }
     };
-    $http.get("http://challenge.transferwise.com/?teamname=wearegoingtolondon&data="+data)
+    $http.get("http://challenge.transferwise.com/?teamname=wearegoingtolondon&data="+JSON.stringify(data))
       .success(function(data){
         console.log("Message sent to transferwire");
       }).error(function(err){

@@ -28,7 +28,8 @@ app.controller('SenderController', function ($scope, $http, SendService) {
                 currency: transfer.receiverCurrency
             }
         };
-        $http.get("http://challenge.transferwise.com/?teamname=wearegoingtolondon&data=" + data)
+
+        $http.get("http://challenge.transferwise.com/?teamname=wearegoingtolondon&data=" + JSON.stringify(data))
             .success(function (data) {
                 console.log("Message sent to transferwire");
             }).error(function (err) {
