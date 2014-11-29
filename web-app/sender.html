@@ -63,14 +63,37 @@
           <div class="tabpanel" role="tabpanel">
             <!-- Nav tabs -->
             <ul class="payment-choice" role="tablist" id="choosePayment">
-              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Credit card</a></li>
+              <li role="presentation" class="active"><a href="#creditCard" aria-controls="home" role="tab" data-toggle="tab">Credit card</a></li>
               or
-              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Bank transfer</a></li>
+              <li role="presentation"><a href="#bankTransfer" aria-controls="profile" role="tab" data-toggle="tab">Bank transfer</a></li>
             </ul>
 
             <!-- Tab panes -->
             <div class="tab-content">
-              <div role="tabpanel" class="tab-pane active" id="creditCard">Insert credit card details to finish the easy transfer process</div>
+              <div role="tabpanel" class="tab-pane active" id="creditCard">Insert credit card details to finish the easy transfer process<br />
+              
+              <form role="form">
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Visa
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> MasterCard
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> EuroCard
+              </label>
+                <div class="form-group">
+                  <label for="firstName">First name on card</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="First name on card">
+                </div>
+                <div class="form-group">
+                  <label for="LastName">Last name on card</label>
+                  <input type="text" class="form-control" id="LastName" placeholder="Surname on card">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+
+              </div>
               <div role="tabpanel" class="tab-pane" id="bankTransfer">Transfer money to TransferEasy account to finish the process</div>
             </div>
 
