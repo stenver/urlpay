@@ -235,7 +235,9 @@ html, body {
 
 *:focus, input[type=text]:focus {
   outline: 0 !important;
-  outline: none; }
+  outline: none;
+  outline-color: transparent;
+  outline-style: none; }
 
 a:link, a:visited {
   color: red;
@@ -266,14 +268,16 @@ a:link, a:visited {
   padding-top: 2em; }
   .main-right .send-text {
     background: white;
-    border-right: none; }
+    border-right: none;
+    padding-top: 1em;
+    padding-bottom: 1em; }
   .main-right .send-amount {
     border-left: none !important;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
     text-align: right;
-    padding: 0 2em; }
+    padding: 2em 2em; }
   .main-right select {
     color: none;
     background: none;

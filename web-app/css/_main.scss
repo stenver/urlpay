@@ -6,6 +6,8 @@ html, body {
 *:focus, input[type=text]:focus {
     outline: 0 !important;
     outline: none;
+    outline-color: transparent;
+	outline-style: none;
 }
 
 a:link, a:visited {
@@ -52,6 +54,8 @@ a:link, a:visited {
 	.send-text {
 		background: white;
 		border-right: none;
+		padding-top: 1em;
+		padding-bottom:1em;
 	}
 
 	.send-amount {
@@ -60,7 +64,7 @@ a:link, a:visited {
 		-webkit-box-shadow: none;
 		box-shadow:         none;
 		text-align: right;
-		padding: 0 2em;
+		padding: 2em 2em;
 	}
 
 	select {

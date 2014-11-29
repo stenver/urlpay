@@ -52,7 +52,7 @@
 
               <!-- Tab panes -->
               <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="creditCard"><p>Insert credit card details to finish the easy transfer process. A total amount of </p>
+                <div role="tabpanel" class="tab-pane active" id="creditCard"><p>Insert credit card details to finish the easy transfer process. A total amount of <span class="amountToSend">{{transfer.amount * 1.005 | currency }}</span><span class="amountDeclare">*</span> <span style="text-transform: uppercase">{{transfer.senderCurrency}}</span> will be taken from your credit card account.</p>
 
                   <label class="left">Card type</label><br/>
                   <label class="radio-inline">
@@ -83,11 +83,16 @@
                                                             placeholder="Security code" ng-model="transfer.securityCode">
                   </div>
                   <button type="submit" style="margin-top: 2em;" class="btn btn-default" ng-click="sendBtn()">Send!</button>
+
+                  <div class="footNote">
+                    <span class="amountDeclare">*</span>We would love to transfer your money free of charge, but hate
+                    cutting on security. Thus, we include minimal possible fee of 0.5% of your transfer.
+                  </div>
                 </div>
 
                 <div role="tabpanel" class="tab-pane" id="bankTransfer">
-                  <p>Transfer <span class="amountToSend">{{transfer.amount * 1.005 | currency : 2}}</span><span class="amountDeclare">{{transfer.senderCurrency}}</span> to your local
-                    TransferEasy bank account below to finish the process.</p>
+                  <p>Transfer <span class="amountToSend">{{transfer.amount * 1.005 | currency }}</span><span class="amountDeclare">*</span> <span style="text-transform: uppercase">{{transfer.senderCurrency}}</span> to your local
+                    URLpay bank account below to finish the process.</p>
 
                   <p>IBAN: EE00 0000 0000 0000 0000</p>
 
