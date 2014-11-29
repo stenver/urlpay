@@ -12,6 +12,8 @@
 		padding-bottom: 4em;	
 		.title {
 			width: 40%;
+			font-size: 3em;
+			font-family: 'Open Sans', sans-serif;
 		}
 		.how-it-works {
 			width: 55%;
@@ -121,10 +123,26 @@
 }
 
 
+// RECEIVE
 
-// TransferWise copy+paste
-
-// END
+.receive-main {
+	h1 {
+		text-align: center !important;
+		font-size: 3em;
+		padding: 0 20%;
+		line-height: 1.4em;
+	}
+	.receive-form {
+		margin: 0 auto;
+		width: 60%;
+	}
+	.receive-iban {
+		text-align: center;
+	}
+	.receive-button {
+		float: right;
+	}
+}
 
 .footer-container {
 	max-width: 1280px;

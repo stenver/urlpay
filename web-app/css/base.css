@@ -239,7 +239,9 @@ textarea {
   .container .header {
     padding-bottom: 4em; }
     .container .header .title {
-      width: 40%; }
+      width: 40%;
+      font-size: 3em;
+      font-family: 'Open Sans', sans-serif; }
     .container .header .how-it-works {
       width: 55%;
       text-align: right;
@@ -310,6 +312,19 @@ textarea {
       margin-top: 2em;
       color: #646464;
       font-size: 0.8em; }
+
+.receive-main h1 {
+  text-align: center !important;
+  font-size: 3em;
+  padding: 0 20%;
+  line-height: 1.4em; }
+.receive-main .receive-form {
+  margin: 0 auto;
+  width: 60%; }
+.receive-main .receive-iban {
+  text-align: center; }
+.receive-main .receive-button {
+  float: right; }
 
 .footer-container {
   max-width: 1280px;
