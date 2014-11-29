@@ -236,16 +236,24 @@ textarea {
 .container {
   max-width: 1280px;
   margin: 0 auto; }
-  .container .title {
-    width: 40%; }
-  .container .nav {
-    width: 60%; }
+  .container .header {
+    padding-bottom: 4em; }
+    .container .header .title {
+      width: 40%; }
+    .container .header .nav {
+      width: 60%;
+      text-align: right; }
 
 .main-left {
-  width: 60%; }
+  width: 60%;
+  padding-right: 2em; }
+  .main-left h1 {
+    text-transform: uppercase;
+    font-size: 4em; }
 
 .main-right {
-  width: 40%; }
+  width: 40%;
+  padding-left: 2em; }
   .main-right .send-text {
     background: white;
     border-right: none; }
