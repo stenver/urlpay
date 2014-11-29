@@ -247,6 +247,13 @@ textarea {
 .main-right {
   width: 40%; }
 
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto; }
+  .footer-container .footer {
+    text-align: center;
+    padding: 2em 0; }
+
 /***************************** TABLETS *****************************/
 /***************************** DESKTOPS *****************************/
 /* COLOURS */
