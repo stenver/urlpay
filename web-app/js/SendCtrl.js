@@ -1,9 +1,7 @@
 var app = angular.module('UrlPay');
 
-console.log("sendCtrl");
-
 app.controller('SenderController', function ($scope, $http, $route, $location, $routeParams) {
-    console.log("lol");
+
     $scope.transfer = {
         urlHash: "SomeHash",
         amount: 1000,
