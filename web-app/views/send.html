@@ -22,7 +22,7 @@
               <span class="send-text input-group-addon">You send</span>
               <input type="text" name="amount" class="form-control send-amount" ng-model="transfer.amount"
                      placeholder="Amount to transfer">
-            <span class="input-group-addon">
+            <span class="input-group-addon btn-success">
               <select ng-model="transfer.senderCurrency">
                 <option value="EUR">EUR</option>
                 <option value="USK">GBP</option>
@@ -44,8 +44,7 @@
             <div class="tabpanel" role="tabpanel">
               <!-- Nav tabs -->
               <ul class="payment-choice" role="tablist" id="choosePayment">
-                <li role="presentation" class="active"><a href="#creditCard" aria-controls="home" role="tab"
-                                                          data-toggle="tab">Credit card</a></li>
+                <li role="presentation" class="active"><a href="#creditCard" aria-controls="home" role="tab" data-toggle="tab">Credit card</a></li>
                 or
                 <li role="presentation"><a href="#bankTransfer" aria-controls="profile" role="tab" data-toggle="tab">Bank
                   transfer</a></li>
