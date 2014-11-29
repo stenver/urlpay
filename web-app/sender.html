@@ -8,8 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Document</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--link rel="stylesheet" href="css/bootstrap.min.css"-->
-  <!--link rel="stylesheet" href="css/bootstrap-theme.min.css"-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
   <link rel="stylesheet" href="css/pocketgrid.css" />
 
@@ -17,45 +17,48 @@
   <link rel="stylesheet" href="css/base.css">
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
-  <!--script src="lib/bootstrap.min.js"></script-->
+  <script src="lib/bootstrap.min.js"></script>
 </head>
 <body>
 
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-<div class="main-header block-group">
-  <div class="block-group">
+<div class="main-head">
+  <div class="container block-group">
     <div class="title block">TransferWise</div>
-    <div class="menu block">HOW IT WORKS</div>
-  </div>
-  <div class="block-group">
-    <div class="main-left block">
-      <h1>The easy new way to transfer money</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec lectus est. Nam efficitur ex sit amet malesuada sagittis. Nulla eu cursus sem. </p>
-    </div>
-    <div class="main-right block-group">
+    <div class="nav block">HOW IT WORKS</div>
+    <div class="block-group">
+      <div class="main-left block">
+        <h1>The easy new way to transfer money</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec lectus est. Nam efficitur ex sit amet malesuada sagittis. Nulla eu cursus sem. </p>
+      </div>
+      <div class="main-right block-group">
 
-      <div class="block">
+        <div class="block">
 
-        <label class="b-calculator__input-label" for="b-calculator__input-amount-send">Send</label>
-        <input name="sourceValue" class="b-calculator__input-amount" id="b-calculator__input-amount-send" value="1000">
-        <div class="b-calculator__input-currency">
-          <select name="sourceCurrencyId" class="b-calculator__input-currency-select sourceCurrency">
+          <div class="input-group">
+            <span class="input-group-addon">You send</span>
+            <input type="text" class="form-control">
+            <span class="input-group-addon">
+              
+              <select>
+                <option value="eur">EUR</option>
+                <option value="gbp">GBP</option>
+                <option value="sek">SEK</option>
+              </select>
 
-            <option value="2"
-                    selected="selected">€</option>
+            </span>
+          </div>
 
-          </select>
         </div>
 
       </div>
-
     </div>
   </div>
-  <div class="block-group">
-    <div class="footer block">© TransferWise Ltd 2014</div>
-  </div>
+</div>
+<div class="footer-container block-group">
+  <div class="footer block">© TransferWise Ltd 2014</div>
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
