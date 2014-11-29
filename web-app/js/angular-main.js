@@ -1,6 +1,6 @@
-var app = angular.module('UrlPay', ['ngResource', 'ui.router']);
+var app = angular.module('UrlPay', ['ngResource', 'ui.router', 'ngClipboard']);
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider, ngClipProvider) {
 
     $urlRouterProvider.otherwise('/send');
 
@@ -15,5 +15,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
               templateUrl: 'views/receive.html',
               controller: 'ReceiveController'
           })
-   // ngClipProvider.setPath("lib/bower_components/zeroclipboard/dist/ZeroClipboard.swf");
+    ngClipProvider.setPath("lib/bower_components/zeroclipboard/dist/ZeroClipboard.swf");
 });
