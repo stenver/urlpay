@@ -1,8 +1,7 @@
 var app = angular.module('UrlPay');
 
 app.controller('ReceiveController', function ($scope, $http, $location, $state) {
-  console.log( $state["urlHash"]);
-  debugger
+
   $http.get("/app/transfer/" + $state.params.urlhash)
     .success(function(data){
       $scope.transfer = data
