@@ -2,12 +2,14 @@
 html, body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
+	outline: none;
 }
 
 a:link, a:visited {
 	color: red;
 	text-decoration: underline;
 }
+
 
 .main-head {
 	background: url('../img/tw_background.jpg') 50% 100% no-repeat;
@@ -140,12 +142,26 @@ a:link, a:visited {
 	.receive-form {
 		margin: 0 auto;
 		width: 60%;
+		select {
+			color: none;
+			background: none;
+			border: none;
+		}
+		.receive-button {
+			float: right;
+			margin-top: 1em;
+		}
 	}
 	.receive-iban {
 		text-align: center;
-	}
-	.receive-button {
-		float: right;
+		color: rgb(10,10,10);
+		padding: 0.5em 0;
+		span {
+			padding: 1em;
+			margin-right: 1em;
+			background: rgba(255,255,255,0.4);
+			border-radius: 4px;
+		}
 	}
 }
 
