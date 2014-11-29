@@ -2,7 +2,15 @@
 html, body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
+}
+input:focus,::-moz-focus-inner {
 	outline: none;
+	outline: 0;
+	background: red;
+	border: none;
+}
+*:focus {
+    outline: 0 !important;
 }
 
 a:link, a:visited {
@@ -56,6 +64,8 @@ a:link, a:visited {
 		-moz-box-shadow:    none;
 		-webkit-box-shadow: none;
 		box-shadow:         none;
+		text-align: right;
+		padding: 0 2em;
 	}
 
 	select {

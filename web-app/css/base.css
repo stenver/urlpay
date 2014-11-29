@@ -231,8 +231,16 @@ textarea {
 /***************************** MOBILE FIRST *****************************/
 html, body {
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  outline: none; }
+  font-weight: 400; }
+
+input:focus, ::-moz-focus-inner {
+  outline: none;
+  outline: 0;
+  background: red;
+  border: none; }
+
+*:focus {
+  outline: 0 !important; }
 
 a:link, a:visited {
   color: red;
@@ -268,7 +276,9 @@ a:link, a:visited {
     border-left: none !important;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none;
+    text-align: right;
+    padding: 0 2em; }
   .main-right select {
     color: none;
     background: none;
