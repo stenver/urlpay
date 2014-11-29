@@ -1,0 +1,32 @@
+## Key business metrics
+* Total number of payments processed
+* Total sum of payments processed
+* Number of distinct customers that have completed at least one payment
+
+## Acquisition:
+### Links to our product on Transferwise/ad websites
+* CTR (click-through ratio)
+* % of users converted to payments
+
+### Other sources
+* % of returning users converted to payments
+
+
+## Engagement in payment flow:
+* Sender retention = % of potential senders reaching each step:
+** filling in initial form
+** clicking payment button
+** actually making payment
+** generating link
+
+* Receiver retention: % of potential receivers reaching each step (when link has already been generated):
+** receiver opened link
+** receiver filled in payment details
+
+
+## User satisfaction:
+* Ease of use
+** % of users clicking "Get help" for each step in payment flow (incl link for receiving payment)
+
+* Virality
+** % of customers referring our product to someone else
