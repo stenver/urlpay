@@ -82,7 +82,31 @@
                                                             class="form-control" id="cardSec"
                                                             placeholder="Security code" ng-model="transfer.securityCode">
                   </div>
-                  <button type="submit" style="margin-top: 2em;" class="btn btn-default" ng-click="sendBtn()">Send!</button>
+                  <button type="submit" style="margin-top: 2em;" class="btn btn-default" data-toggle="modal" data-target="#myModal" ng-click="sendBtn()">Send</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Transaction initialized</h4>
+      </div>
+      <div class="modal-body">
+        Remember to send the following transfer link to receiver
+        <div class="via-link">
+              <span>http://transfer.easy/{{transfer.urlHash}}</span>
+              <button clip-copy="getTransferUrl()" type="button" class="via-copy btn btn-default " aria-expanded="false">
+                Copy
+              </button>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
                   <div class="footNote">
                     <span class="amountDeclare">*</span>We would love to transfer your money free of charge, but hate
