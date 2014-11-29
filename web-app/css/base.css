@@ -229,6 +229,14 @@ textarea {
   h3 {
     page-break-after: avoid; } }
 /***************************** MOBILE FIRST *****************************/
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; }
+
+a:link, a:visited {
+  color: red;
+  text-decoration: underline; }
+
 .main-head {
   background: url("../img/tw_background.jpg") 50% 100% no-repeat;
   padding: 3em 0 2em 0; }
@@ -247,11 +255,13 @@ textarea {
   padding-right: 2em; }
   .main-left h1 {
     text-transform: uppercase;
-    font-size: 4em; }
+    font-size: 4em;
+    margin-top: 0; }
 
 .main-right {
   width: 40%;
-  padding-left: 2em; }
+  padding-left: 2em;
+  padding-top: 2em; }
   .main-right .send-text {
     background: white;
     border-right: none; }
