@@ -24,36 +24,36 @@
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
+<div class="main-header block-group">
+  <div class="block-group">
+    <div class="header block">Header</div>
+  </div>
+  <div class="block-group">
+    <div class="main-left block">Left copy</div>
+    <div class="main-right block-group">
 
-<div class="block-group">
-  <div class="header block">Header</div>
-</div>
-<div class="block-group">
-  <div class="main-left block">Left copy</div>
-  <div class="main-right block-group">
+      <div class="block">
 
-    <div class="block">
+        <label class="b-calculator__input-label" for="b-calculator__input-amount-send">You send</label>
+        <input name="sourceValue" class="b-calculator__input-amount" id="b-calculator__input-amount-send" value="1000">
+        <div class="b-calculator__input-currency">
+          <select name="sourceCurrencyId" class="b-calculator__input-currency-select sourceCurrency">
 
-      <label class="b-calculator__input-label" for="b-calculator__input-amount-send">You send</label>
-      <input name="sourceValue" class="b-calculator__input-amount" id="b-calculator__input-amount-send" value="1000">
-      <div class="b-calculator__input-currency">
-        <select name="sourceCurrencyId" class="b-calculator__input-currency-select sourceCurrency">
+            <option value="2"
+                    selected="selected">GBP</option>
 
-          <option value="2"
-                  selected="selected">GBP</option>
+          </select>
+          <div class="b-calculator__input-currency-current js-source-currency-label">GBP</div>
+        </div>
 
-        </select>
-        <div class="b-calculator__input-currency-current js-source-currency-label">GBP</div>
       </div>
 
     </div>
-
+  </div>
+  <div class="block-group">
+    <div class="footer block">Footer</div>
   </div>
 </div>
-<div class="block-group">
-  <div class="footer block">Footer</div>
-</div>
-
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
