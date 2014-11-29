@@ -15,4 +15,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
               templateUrl: 'views/receive.html',
               controller: 'ReceiveController'
           })
+   // ngClipProvider.setPath("lib/bower_components/zeroclipboard/dist/ZeroClipboard.swf");
 });

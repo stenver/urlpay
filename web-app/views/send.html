@@ -24,9 +24,9 @@
               <input type="text" name="amount" class="form-control send-amount" ng-model="transfer.amount" placeholder="Amount to transfer">
             <span class="input-group-addon">
               <select ng-model="transfer.senderCurrency">
-                <option value="eur">EUR</option>
-                <option value="gbp">GBP</option>
-                <option value="sek">SEK</option>
+                <option value="EUR">EUR</option>
+                <option value="USK">GBP</option>
+                <option value="GDP">SEK</option>
               </select>
             </span>
             </div>
@@ -86,7 +86,7 @@
                 </div>
 
                 <div role="tabpanel" class="tab-pane" id="bankTransfer">
-                  <p>Transfer <span class="amountToSend">1005€</span><span class="amountDeclare">*</span> to your local
+                  <p>Transfer <span class="amountToSend">{{transfer.amount * 1.005 | currency : 2}}</span><span class="amountDeclare">{{transfer.senderCurrency}}</span> to your local
                     TransferEasy bank account below to finish the process.</p>
 
                   <p>IBAN: EE00 0000 0000 0000 0000</p>

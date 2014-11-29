@@ -36,12 +36,24 @@ app.controller('SenderController', function ($scope, $http, SendService) {
             }
         };
 
-        $http.get("http://challenge.transferwise.com/?teamname=wearegoingtolondon&data=" + JSON.stringify(data))
-            .success(function (data) {
+        $.ajax({
+            type: "GET",
+            url: "http://challenge.transferwise.com/?teamname=wearegoingtolondon&data=" + JSON.stringify(data),
+            cache: false,
+            crossDomain : true,
+            success: function(html){
                 console.log("Message sent to transferwire");
-            }).error(function (err) {
+            },
+            error: function(err){
                 console.log(err);
-            });
+            }
+        });
+        //$http.get("http://challenge.transferwise.com/?teamname=wearegoingtolondon&data=" + JSON.stringify(data))
+        //    .success(function (data) {
+        //        console.log("Message sent to transferwire");
+        //    }).error(function (err) {
+        //        console.log(err);
+        //    });
 
         console.log('sending');
         SendService.transfer($scope.transfer, function () {
