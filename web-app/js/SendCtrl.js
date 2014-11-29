@@ -1,15 +1,26 @@
 var app = angular.module('UrlPay');
 
-app.controller('SenderController', function ($scope, $http) {
+app.controller('SenderController', function ($scope, $http, SendService) {
+    var getRandom = function () {
+        var number = '' + Math.random();
+        var randomStr = number.substring(2, number.length);
+        return randomStr;
+    };
+
     $scope.transfer = {
-        urlHash: "SomeHash",
+        urlHash: getRandom(),
         amount: 1000,
         currency: "eur",
         country: "Estonia",
-        creditCardNumber: "12321321231"
+        firstname: "fdsafdsa",
+        lastname: 'lastfdsajlk',
+        creditCardNumber: "12321321231",
+        securityCode: '1234'
     };
-    $scope.send = function(transfer){
-        data = {
+
+    $scope.sendBtn = function () {
+        var transfer = $scope.transfer;
+        var data = {
             receiver: {
                 amount: transfer.amount,
                 urlhash: transfer.urlhash,
@@ -17,17 +28,19 @@ app.controller('SenderController', function ($scope, $http) {
                 currency: transfer.receiverCurrency
             }
         };
-        $http.get("http://challenge.transferwise.com/?teamname=wearegoingtolondon&data="+data)
-          .success(function(data){
-              console.log("Message sent to transferwire");
-          }).error(function(err){
-              console.log(err);
-          });
 
-        $http.port("/app/transfer", transfer).success(function(data){
-            console.log("Transfer done!");
-        }).error(function(err){
-            console.log(err);
+        $http.get("http://challenge.transferwise.com/?teamname=wearegoingtolondon&data=" + JSON.stringify(data))
+            .success(function (data) {
+                console.log("Message sent to transferwire");
+            }).error(function (err) {
+                console.log(err);
+            });
+
+        console.log('sending');
+        SendService.transfer($scope.transfer, function () {
+            console.log('Transfer done');
+        }, function (err) {
+            console.error('Error occurred');
         });
-    }
+    };
 });
