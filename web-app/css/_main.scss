@@ -14,8 +14,9 @@
 			width: 40%;
 		}
 		.how-it-works {
-			width: 60%;
+			width: 55%;
 			text-align: right;
+			padding-top: 1em;
 		}
 	}
 	
@@ -91,6 +92,10 @@
 			color: white;
 			background: green;
 		}
+	}
+	.left {
+		float: left;
+		padding-top: 1em;
 	}
 
 	#creditCard, #bankTransfer {
