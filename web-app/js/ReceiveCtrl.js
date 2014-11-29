@@ -11,6 +11,19 @@ app.controller('ReceiveController', function ($scope, $http, $location, $state) 
     });
 
   $scope.receive = function(transfer){
+    data = {
+      sender: {
+        amount: transfer.amount,
+        urlhash: transfer.urlhash,
+        currency: transfer.senderCurrency
+      }
+    };
+    $http.get("http://challenge.transferwise.com/?teamname=wearegoingtolondon&data="+data)
+      .success(function(data){
+        console.log("Message sent to transferwire");
+      }).error(function(err){
+        console.log(err);
+      });
     $http.post("/app/transfer", transfer).success(function(data){
       console.log("Transfer done!");
     }).error(function(err){
