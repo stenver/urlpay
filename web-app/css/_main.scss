@@ -3,14 +3,9 @@ html, body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 }
-input:focus,::-moz-focus-inner {
-	outline: none;
-	outline: 0;
-	background: red;
-	border: none;
-}
-*:focus {
+*:focus, input[type=text]:focus {
     outline: 0 !important;
+    outline: none;
 }
 
 a:link, a:visited {
@@ -20,7 +15,7 @@ a:link, a:visited {
 
 
 .main-head {
-	background: url('../img/tw_background.jpg') 50% 100% no-repeat;
+	background: url('../img/tw_background7.jpg') 50% 100% no-repeat;
 	padding: 3em 0 8em 0;
 }
 .container {
@@ -151,7 +146,7 @@ a:link, a:visited {
 	h1 {
 		text-align: center !important;
 		font-size: 2.8em;
-		padding: 0 20% 1em;
+		padding: 0 10% 1em;
 		line-height: 1.4em;
 	}
 	.receive-form {
