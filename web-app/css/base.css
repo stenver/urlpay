@@ -239,13 +239,8 @@ textarea {
   .container .header {
     padding-bottom: 4em; }
     .container .header .title {
-      width: 40%;
       font-size: 3em;
       font-family: 'Open Sans', sans-serif; }
-    .container .header .how-it-works {
-      width: 55%;
-      text-align: right;
-      padding-top: 1em; }
 
 .main-left {
   width: 60%;
