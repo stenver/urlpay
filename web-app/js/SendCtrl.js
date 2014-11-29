@@ -1,7 +1,6 @@
 var app = angular.module('UrlPay');
 
 app.controller('SenderController', function ($scope, $http, $route, $location, $routeParams) {
-
     $scope.transfer = {
         urlHash: "SomeHash",
         amount: 1000,
