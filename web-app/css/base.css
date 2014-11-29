@@ -296,11 +296,20 @@ textarea {
     background: green; }
   .main-right .left {
     float: left;
-    padding-top: 1em; }
+    padding-top: 0.2em; }
   .main-right #creditCard, .main-right #bankTransfer {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 4px;
     padding: 1em; }
+  .main-right #bankTransfer {
+    line-height: 1.5em; }
+    .main-right #bankTransfer .amountDeclare {
+      vertical-align: super; }
+    .main-right #bankTransfer .footNote {
+      border-top: 1px solid #646464;
+      margin-top: 2em;
+      color: #646464;
+      font-size: 0.8em; }
 
 .footer-container {
   max-width: 1280px;

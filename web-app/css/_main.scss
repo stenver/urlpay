@@ -95,11 +95,11 @@
 	}
 	.left {
 		float: left;
-		padding-top: 1em;
+		padding-top: 0.2em;
 	}
 
 	#creditCard, #bankTransfer {
-		background: rgba(255,255,255,0.5);
+		background: rgba(255,255,255,0.9);
 		border-radius: 4px;
 		padding: 1em;
 	}
@@ -107,7 +107,16 @@
 
 	}
 	#bankTransfer {
-
+		line-height: 1.5em;
+		.amountDeclare {
+			vertical-align: super;
+		}
+		.footNote {
+			border-top: 1px solid rgb(100,100,100);
+			margin-top: 2em;
+			color: rgb(100,100,100);
+			font-size: 0.8em;
+		}
 	}
 }
 
