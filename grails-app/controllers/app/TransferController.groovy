@@ -19,6 +19,9 @@ class TransferController {
         transfer.receiverTransfered = true;
         transfer.receiverCurrency = request.JSON["receiverCurrency"]
         transfer.receiverAccount = request.JSON["receiverAccount"]
+
+        println(transfer)
+
         transfer.save(flush: true, failOnError: true)
         render transfer as JSON
     }
