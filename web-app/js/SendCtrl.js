@@ -9,7 +9,7 @@ app.controller('SenderController', function ($scope, $http, SendService) {
 
     $scope.transfer = {
         urlHash: getRandom(),
-        amount: 1000,
+        amount: "",
         senderCurrency: "eur",
         country: "Estonia",
         firstName: "",
