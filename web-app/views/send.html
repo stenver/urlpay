@@ -11,18 +11,18 @@
     </div>
     <div class="block-group">
       <div class="main-left block ">
-        <h1>The easy new way to transfer money</h1>
+        <h1>The easy new way to transfer online cash</h1>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec lectus est. Nam efficitur ex sit amet
-          malesuada sagittis. Nulla eu cursus sem. </p>
+        <p>Spend less time transferring money online - use URLpay. Low fees and privacy guaranteed for both national and international transfers. Start your transfer now! </p>
       </div>
       <div class="main-right block-group">
         <div class="block">
           <form role="form" name="transferForm">
             <div class="input-group">
               <span class="send-text input-group-addon">You send</span>
-              <input type="text" name="amount" class="form-control send-amount" ng-model="transfer.amount" placeholder="Amount to transfer">
-            <span class="input-group-addon">
+              <input type="text" name="amount" class="form-control send-amount" ng-model="transfer.amount"
+                     placeholder="Amount to transfer">
+            <span class="input-group-addon btn-success">
               <select ng-model="transfer.senderCurrency">
                 <option value="EUR">EUR</option>
                 <option value="USK">GBP</option>
@@ -34,8 +34,9 @@
             <div class="via">and send this link to the receiver</div>
 
             <div class="via-link">
-              <span>http://transfer.easy/{{transfer.urlHash}}</span>
-              <button clip-copy="getTransferUrl()" type="button" class="via-copy btn btn-default " aria-expanded="false">
+              <span>http://urlpay.com/{{transfer.urlHash}}</span>
+              <button clip-copy="getTransferUrl()" type="button" class="via-copy btn btn-default "
+                      aria-expanded="false" data-toggle="tooltip" data-placement="right" title="Copy to clipboard">
                 Copy
               </button>
             </div>
@@ -43,8 +44,7 @@
             <div class="tabpanel" role="tabpanel">
               <!-- Nav tabs -->
               <ul class="payment-choice" role="tablist" id="choosePayment">
-                <li role="presentation" class="active"><a href="#creditCard" aria-controls="home" role="tab"
-                                                          data-toggle="tab">Credit card</a></li>
+                <li role="presentation" class="active"><a href="#creditCard" aria-controls="home" role="tab" data-toggle="tab">Credit card</a></li>
                 or
                 <li role="presentation"><a href="#bankTransfer" aria-controls="profile" role="tab" data-toggle="tab">Bank
                   transfer</a></li>
@@ -52,37 +52,74 @@
 
               <!-- Tab panes -->
               <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="creditCard"><p>Insert credit card details to finish the easy transfer process. A total amount of <span class="amountToSend">{{transfer.amount * 1.005 | currency }}</span><span class="amountDeclare">*</span> <span style="text-transform: uppercase">{{transfer.senderCurrency}}</span> will be taken from your credit card account.</p>
+                <div role="tabpanel" class="tab-pane active" id="creditCard"><p>Insert credit card details to finish the
+                  easy transfer process. A total amount of <span class="amountToSend">{{transfer.amount * 1.005 | currency }}</span><span
+                    class="amountDeclare">*</span> <span
+                    style="text-transform: uppercase">{{transfer.senderCurrency}}</span> will be taken from your credit
+                  card account.</p>
 
                   <label class="left">Card type</label><br/>
                   <label class="radio-inline">
-                    <input type="radio" ng-model="transfer.cardType" name="inlineRadioOptions" id="inlineRadio1" value="Visa"> Visa
+                    <input type="radio" ng-model="transfer.cardType" name="inlineRadioOptions" id="inlineRadio1"
+                           value="Visa"> Visa
                   </label>
                   <label class="radio-inline">
-                    <input type="radio" ng-model="transfer.cardType" name="inlineRadioOptions" id="inlineRadio2" value="MasterCard"> MasterCard
+                    <input type="radio" ng-model="transfer.cardType" name="inlineRadioOptions" id="inlineRadio2"
+                           value="MasterCard"> MasterCard
                   </label>
                   <label class="radio-inline">
-                    <input type="radio" ng-model="transfer.cardType" name="inlineRadioOptions" id="inlineRadio3" value="EuroCard"> EuroCard
+                    <input type="radio" ng-model="transfer.cardType" name="inlineRadioOptions" id="inlineRadio3"
+                           value="EuroCard"> EuroCard
                   </label>
 
 
                   <div class="form-group">
-                    <label class="left" for="firstName">First name on card</label>
-                    <input type="text" class="form-control" id="firstName" ng-model="transfer.firstName" placeholder="First name on card">
+                    <label class="left" for="firstName">First name on card</label><br/>
+                    <input type="text" class="form-control" id="firstName" ng-model="transfer.firstName"
+                           placeholder="First name on card">
                   </div>
                   <div class="form-group">
-                    <label class="left" for="LastName">Last name on card</label>
-                    <input type="text" class="form-control" id="LastName" ng-model="transfer.lastName" placeholder="Surname on card">
+                    <label class="left" for="LastName">Last name on card</label><br/>
+                    <input type="text" class="form-control" id="LastName" ng-model="transfer.lastName"
+                           placeholder="Surname on card">
                   </div>
                   <div class="form-group">
-                    <label class="left" for="cardNum" style="width: 100%;">Credit card</label>
+                    <label class="left" for="cardNum" style="width: 100%;">Credit card</label><br/>
                     <input type="text" style="width: 70%; float:left" class="form-control" id="cardNum"
-                           placeholder="Card number" ng-model="transfer.creditCardNumber" />
+                           placeholder="Card number" ng-model="transfer.creditCardNumber"/>
                     <input style="width: 28%;float:right;display: inline" type="text"
-                                                            class="form-control" id="cardSec"
-                                                            placeholder="Security code" ng-model="transfer.securityCode">
+                           class="form-control" id="cardSec"
+                           placeholder="Security code" ng-model="transfer.securityCode">
                   </div>
-                  <button type="submit" style="margin-top: 2em;" class="btn btn-default" ng-click="sendBtn()">Send!</button>
+                  <button type="submit" style="margin-top: 2em;" class="btn btn-success" data-toggle="modal" data-target="#myModal" ng-click="sendBtn()">Send
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                       aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only" >Close</span></button>
+                          <h4 class="modal-title" id="myModalLabel">Transaction initialized</h4>
+                        </div>
+                        <div class="modal-body">
+                          Remember to send the following transfer link to receiver
+                          <div class="via-link">
+                            <span>http://transfer.easy/{{transfer.urlHash}}</span>
+                            <button clip-copy="getTransferUrl()" type="button" class="via-copy btn btn-default "
+                                    aria-expanded="false">
+                              Copy
+                            </button>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="reloadPage()">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
                   <div class="footNote">
                     <span class="amountDeclare">*</span>We would love to transfer your money free of charge, but hate
@@ -91,10 +128,13 @@
                 </div>
 
                 <div role="tabpanel" class="tab-pane" id="bankTransfer">
-                  <p>Transfer <span class="amountToSend">{{transfer.amount * 1.005 | currency }}</span><span class="amountDeclare">*</span> <span style="text-transform: uppercase">{{transfer.senderCurrency}}</span> to your local
+                  <p>Transfer <span class="amountToSend">{{transfer.amount * 1.005 | currency }}</span><span
+                    class="amountDeclare">*</span> <span
+                    style="text-transform: uppercase">{{transfer.senderCurrency}}</span> to your local
                     URLpay bank account below to finish the process.</p>
 
                   <p>IBAN: EE00 0000 0000 0000 0000</p>
+                  <p>Reference number: 123123214</p>
 
                   <div class="footNote">
                     <span class="amountDeclare">*</span>We would love to transfer your money free of charge, but hate
