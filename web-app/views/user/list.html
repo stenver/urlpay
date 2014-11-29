@@ -1,0 +1,59 @@
+<div class="panel panel-default">
+  <div class="panel-heading">List of users</div>
+  <div class="panel-body">
+    <table class="table table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Age</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <input type="text" ng-model="search" class="search-query" placeholder="Search">
+      <tr id="phrRow" ng-repeat="user in users| filter:search | orderBy:'name'">
+        <td>
+          <p data-ng-hide="user.editmode">{{user.name}}</p>
+          <input type="text" data-ng-show="user.editmode" ng-model="user.name" placeholder="Enter a name here">
+        </td>
+        <td>
+          <p data-ng-hide="user.editmode">{{user.description}}</p>
+          <input type="text" data-ng-show="user.editmode" ng-model="user.description" placeholder="Enter a name here">
+        </td>
+        <td>
+          <p data-ng-hide="user.editmode">{{user.age}}</p>
+          <input type="text" data-ng-show="user.editmode" ng-model="user.age" placeholder="Enter a name here">
+        </td>
+        <td>
+          <button data-ng-hide="user.editmode" class="btn btn-xs" ng-click="editUser(user)">
+          Edit
+          </button>
+          <button data-ng-show="user.editmode" class="btn btn-xs" ng-click="updateUser(user)">
+          Save
+          </button>
+          <button class="btn btn-xs btn-error" ng-click="deleteUser(user)">
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" ng-model="userName" placeholder="Enter a name here"/>
+        </td>
+        <td>
+          <input type="text" ng-model="userDescription" placeholder="Enter a name here"/>
+        </td>
+        <td>
+          <input type="text" ng-model="userAge" placeholder="Enter a name here"/>
+        </td>
+        <td>
+          <button class="btn btn-xs btn-success" ng-click="saveUser(userName, userDescription, userAge)">
+            Save
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
