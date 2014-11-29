@@ -13,7 +13,7 @@
 		.title {
 			width: 40%;
 		}
-		.nav {
+		.how-it-works {
 			width: 60%;
 			text-align: right;
 		}
@@ -64,6 +64,45 @@
 			background: rgba(255,255,255,0.4);
 			border-radius: 4px;
 		}
+	}
+	.tabpanel {
+		text-align: center;
+	}
+	.payment-choice {
+		> li  {
+			position: relative;
+			display: inline-block;
+				> a {
+				position: relative;
+				display: block;
+				padding: 10px 15px;
+				border-radius: 4px;
+				color: green;
+				text-decoration: none;
+				background-color: transparent;
+				background: rgba(200,200,200,0.5);
+
+				&:hover, &:focus {
+					background: rgba(200,200,200,0.8);
+				}
+			}
+		}
+		>li.active>a, >li.active>a:hover, >li.active>a:focus {
+			color: white;
+			background: green;
+		}
+	}
+
+	#creditCard, #bankTransfer {
+		background: rgba(255,255,255,0.5);
+		border-radius: 4px;
+		padding: 1em;
+	}
+	#creditCard {
+
+	}
+	#bankTransfer {
+
 	}
 }
 

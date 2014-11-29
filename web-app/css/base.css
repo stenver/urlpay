@@ -240,7 +240,7 @@ textarea {
     padding-bottom: 4em; }
     .container .header .title {
       width: 40%; }
-    .container .header .nav {
+    .container .header .how-it-works {
       width: 60%;
       text-align: right; }
 
@@ -274,6 +274,29 @@ textarea {
       margin-right: 1em;
       background: rgba(255, 255, 255, 0.4);
       border-radius: 4px; }
+  .main-right .tabpanel {
+    text-align: center; }
+  .main-right .payment-choice > li {
+    position: relative;
+    display: inline-block; }
+    .main-right .payment-choice > li > a {
+      position: relative;
+      display: block;
+      padding: 10px 15px;
+      border-radius: 4px;
+      color: green;
+      text-decoration: none;
+      background-color: transparent;
+      background: rgba(200, 200, 200, 0.5); }
+      .main-right .payment-choice > li > a:hover, .main-right .payment-choice > li > a:focus {
+        background: rgba(200, 200, 200, 0.8); }
+  .main-right .payment-choice > li.active > a, .main-right .payment-choice > li.active > a:hover, .main-right .payment-choice > li.active > a:focus {
+    color: white;
+    background: green; }
+  .main-right #creditCard, .main-right #bankTransfer {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    padding: 1em; }
 
 .footer-container {
   max-width: 1280px;
