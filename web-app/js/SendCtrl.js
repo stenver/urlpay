@@ -15,7 +15,7 @@ app.controller('SenderController', function ($scope, $http, SendService) {
         firstName: "",
         lastName: "",
 
-        cardType: "",
+        cardType: "Visa",
         creditCardNumber: "",
         securityCode: "",
         senderTransfered: true
