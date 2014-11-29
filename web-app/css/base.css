@@ -246,10 +246,26 @@ textarea {
 
 .main-right {
   width: 40%; }
+  .main-right .send-text {
+    background: white;
+    border-right: none; }
   .main-right select {
     color: none;
     background: none;
     border: none; }
+  .main-right .via {
+    text-align: center;
+    color: #646464;
+    padding: 1em 0; }
+  .main-right .via-link {
+    text-align: center;
+    color: #0a0a0a;
+    padding: 0.5em 0; }
+    .main-right .via-link span {
+      padding: 1em;
+      margin-right: 1em;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 4px; }
 
 .footer-container {
   max-width: 1280px;
