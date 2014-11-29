@@ -7,11 +7,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
         .state('send', {
             url: '/send',
             templateUrl: 'views/send.html',
-            controller: 'SendCtrl'
+            controller: 'SenderController'
         })
         .state('receive', {
             url: '/receive',
             templateUrl: 'views/receive.html',
-            controller: 'ReceiveCtrl'
+            controller: 'ReceiveController'
         })
 });
