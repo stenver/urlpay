@@ -1,0 +1,3 @@
+app.service('ReceiveService', function () {
+
+});
