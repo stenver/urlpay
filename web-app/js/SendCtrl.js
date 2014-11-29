@@ -2,7 +2,7 @@ var app = angular.module('UrlPay');
 
 console.log("sendCtrl");
 
-app.controller('SenderController', function ($scope, $http, $route, $location, $routeParams) {
+app.controller('SenderController', function ($scope, $http) {
     console.log("lol");
     $scope.transfer = {
         urlHash: "SomeHash",
