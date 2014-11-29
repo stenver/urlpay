@@ -11,21 +11,22 @@
     </div>
     <div class="block-group">
 
-      <div class="receive-main block ">
+      <div class="receive-main block">
         <h1>Somebody wants to send you money via URL<strong>pay</strong>. Enter your bank account IBAN and currency below to finish the transfer.</h1>
         <form role="form" class="receive-form">
           <div class="form-group">
             <div class="input-group">
-              <input type="text" name="text" placeholder="Your bank account IBAN" class="form-control receive-iban" id="receiverIban">
+              <input type="text" name="text" placeholder="Your bank account IBAN" class="form-control receive-iban"
+                     id="receiverIban" ng-model="transfer.receiverAccount">
               <span class="input-group-addon">
-                <select>
+                <select ng-model="transfer.receiverCurrency">
                   <option value="eur">EUR</option>
                   <option value="gbp">GBP</option>
                   <option value="sek">SEK</option>
                 </select>
               </span>
             </div>
-            <button type="submit" class="btn btn-success receive-button">Finish transfer!</button>
+            <button type="submit" class="btn btn-success receive-button" ng-click="receive()">Finish transfer!</button>
           </div>
         </form>
       </div>

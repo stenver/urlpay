@@ -10,7 +10,7 @@ class UrlMappings {
         "/"(view:"/index")
         "/transfer" {
             controller = "transfer"
-            action = [POST: "send", UPDATE: "receive"]
+            action = [POST: "send", PUT: "receive"]
         }
         "/transfer/$urlHash" {
             controller = "transfer"
