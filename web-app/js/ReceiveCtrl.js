@@ -1,7 +1,8 @@
 var app = angular.module('UrlPay');
 
-app.controller('ReceiveController', function ($scope, $http, $route, $location, $routeParams) {
-  $http.get("/app/transfer/" + $routeParams["urlHash"])
+app.controller('ReceiveController', function ($scope, $http, $location, $state) {
+
+  $http.get("/app/transfer/" + $state["urlHash"])
     .success(function(data){
       $scope.transfer = data
       console.log("Got transfer!", data);
