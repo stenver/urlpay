@@ -1,7 +1,25 @@
 /***************************** MOBILE FIRST *****************************/
 
-
-
+.main-head {
+	background: url('../img/tw_background.jpg') 50% 100% no-repeat;
+	padding: 3em 0 2em 0;
+}
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	.title {
+		width: 40%;
+	}
+	.nav {
+		width: 60%;
+	}
+}
+.main-left {
+	width: 60%;
+}
+.main-right {
+	width: 40%;
+}
 
 
 

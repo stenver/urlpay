@@ -229,28 +229,25 @@ textarea {
   h3 {
     page-break-after: avoid; } }
 /***************************** MOBILE FIRST *****************************/
-.nav {
-  width: 20%;
-  height: 200px; }
+.main-head {
+  background: url("../img/tw_background.jpg") 50% 100% no-repeat;
+  padding: 3em 0 2em 0; }
 
-.main {
-  width: 80%; }
+.container {
+  max-width: 1280px;
+  margin: 0 auto; }
+  .container .title {
+    width: 40%; }
+  .container .nav {
+    width: 60%; }
 
-.item {
-  width: 50%; }
+.main-left {
+  width: 60%; }
 
-/* 2 columns */
+.main-right {
+  width: 40%; }
+
 /***************************** TABLETS *****************************/
-@media (min-width: 40em) {
-  .item {
-    width: 25%; }
-
-  /* 4 columns */ }
 /***************************** DESKTOPS *****************************/
-@media (min-width: 60em) {
-  .item {
-    width: 20%; }
-
-  /* 5 columns */ }
 /* COLOURS */
 /* FONT STACK */
