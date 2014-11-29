@@ -261,6 +261,10 @@ a:link, a:visited {
     text-transform: uppercase;
     font-size: 4em;
     margin-top: 0; }
+  .main-left p {
+    line-height: 1.4em;
+    font-size: 1.4em;
+    font-family: 'Open Sans', sans-serif; }
 
 .main-right {
   width: 40%;
