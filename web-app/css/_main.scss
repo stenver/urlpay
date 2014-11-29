@@ -7,18 +7,36 @@
 .container {
 	max-width: 1280px;
 	margin: 0 auto;
-	.title {
-		width: 40%;
+
+	.header {
+		padding-bottom: 4em;	
+		.title {
+			width: 40%;
+		}
+		.nav {
+			width: 60%;
+			text-align: right;
+		}
 	}
-	.nav {
-		width: 60%;
-	}
+	
 }
 .main-left {
 	width: 60%;
+	padding-right: 2em;
+
+	h1 {
+		text-transform: uppercase;
+		font-size: 4em;
+	}
+
+	p {
+
+	}
 }
 .main-right {
 	width: 40%;
+	padding-left: 2em;
+
 
 	.send-text {
 		background: white;
