@@ -181,16 +181,22 @@ a:link, a:visited {
 		}
 	}
 
-	input:required:invalid, input:focus:invalid {
+	input:required:invalid {
+		/* insert your own styles for invalid form input */
+		-moz-box-shadow: none;
+		box-shadow: none;
+		border-color: none;
+	}
+	input:focus:invalid {
 		/* insert your own styles for invalid form input */
 		-moz-box-shadow: none;
 		box-shadow: 0 0 5px #d45252;
-		border-color: #b03535
+		border-color: rgba(198,54,54,0.5);
 	}
 	input:required:valid {
 		/* insert your own styles for valid form input */
 		box-shadow: 0 0 5px #5cd053;
-		border-color: #28921f;
+		border-color: rgba(45,178,34,0.5);
 	}
 }
 
