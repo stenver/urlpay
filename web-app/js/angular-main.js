@@ -2,11 +2,11 @@ var app = angular.module('UrlPay', ['ngResource', 'ui.router', 'ngClipboard']);
 
 app.config(function($stateProvider, $urlRouterProvider, ngClipProvider) {
 
-    $urlRouterProvider.otherwise('/send');
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
         .state('send', {
-            url: '/send',
+            url: '/',
             templateUrl: 'views/send.html',
             controller: 'SenderController'
         })

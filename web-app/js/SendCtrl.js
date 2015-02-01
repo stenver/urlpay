@@ -21,7 +21,7 @@ app.controller('SenderController', function ($scope, $http, SendService, $window
     senderTransfered: true
   };
 
-  $scope.transferUrl = "http://" + window.location.host + "/index.html#/receive/" + $scope.transfer.urlHash;
+  $scope.transferUrl = "http://" + window.location.host + "/#/receive/" + $scope.transfer.urlHash;
 
   $scope.getTransferUrl = function () {
     return $scope.transferUrl;
