@@ -372,6 +372,12 @@ a:link, a:visited {
   /* insert your own styles for valid form input */
   box-shadow: 0 0 4px #5cd053;
   border-color: #28921f; }
+.receive-main .toHomePageLink:visited, .receive-main .toHomePageLink:link {
+  color: #000000;
+  text-decoration: none; }
+.receive-main .toHomePageLink:hover, .receive-main .toHomePageLink:active {
+  color: #0e8140;
+  text-decoration: none; }
 
 .footer-container {
   max-width: 1280px;
@@ -379,13 +385,6 @@ a:link, a:visited {
   .footer-container .footer {
     text-align: center;
     padding: 2em 0; }
-
-.sender-amount-error-msg {
-  /* insert your own styles for invalid form input */
-  -moz-box-shadow: none;
-  box-shadow: none;
-  color: red;
-}
 
 /***************************** TABLETS *****************************/
 /***************************** DESKTOPS *****************************/

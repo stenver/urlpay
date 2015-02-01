@@ -199,11 +199,13 @@ a:link, a:visited {
 		border-color: #28921f;
 	}
 
-	.show-input {
-		
+	.toHomePageLink:visited, .toHomePageLink:link {
+		color: #000000;
+		text-decoration: none;
 	}
-	.show-thank-you {
-		
+	.toHomePageLink:hover, .toHomePageLink:active {
+		color: #0e8140;
+		text-decoration: none;
 	}
 }
 

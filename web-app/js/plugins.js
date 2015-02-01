@@ -40,13 +40,3 @@ if(!supports_input_placeholder()) {
       }
     }
 }
-
-/*/ js form validation
-function validateForm() {
-    var x = document.forms["receiveForm"]["receiveInputIban"].value;
-    if (x==null || x=="") {
-        alert("IBAN must be filled out");
-        return false;
-    }
-}
-*/
