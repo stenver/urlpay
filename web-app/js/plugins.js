@@ -53,7 +53,7 @@ function validateForm() {
 }
 
 $("#transferSubmit").click(function(){
-    if validateForm() {
+    if (validateForm() == true) {
         $(".show-input").hide();
         $(".show-thank-you").show();
     };
