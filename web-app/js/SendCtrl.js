@@ -27,6 +27,10 @@ app.controller('SenderController', function ($scope, $http, SendService, $window
     return $scope.transferUrl;
   };
 
+  $scope.getClickMessage = function(){
+    $scope.copied = true;
+  };
+
   $scope.reloadPage = function() {
     console.log("reloading page");
     $window.location.reload();
