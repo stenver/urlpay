@@ -381,6 +381,9 @@ a:link, a:visited {
   .receive-main .toHomePageLink a:hover, .receive-main .toHomePageLink a:active {
     color: black;
     text-decoration: none; }
+.receive-main .noTransfer {
+  width: 100%;
+  margin: 0 auto; }
 
 .footer-container {
   max-width: 1280px;
@@ -388,21 +391,6 @@ a:link, a:visited {
   .footer-container .footer {
     text-align: center;
     padding: 2em 0; }
-
-.sender-amount-error-msg {
-  /* insert your own styles for invalid form input */
-  -moz-box-shadow: none;
-  box-shadow: none;
-  color: red;
-}
-
-.show-copied {
-  /* insert your own styles for invalid form input */
-  -moz-box-shadow: none;
-  box-shadow: none;
-  text-align: right;
-  display: block;
-}
 
 /***************************** TABLETS *****************************/
 /***************************** DESKTOPS *****************************/
