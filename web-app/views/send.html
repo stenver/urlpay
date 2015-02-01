@@ -17,18 +17,21 @@
       </div>
       <div class="main-right block-group">
         <div class="block">
-          <form role="form" name="transferForm">
+          <span ng-show="transfer.amount <= 1000"><br/></span>
+          <span class="sender-amount-error-msg" ng-show="transfer.amount > 1000">We are sorry, but 1000 is the maximum allowed to be sent.</span>
+          <form role="form" name="transferForm" novalidate>
             <div class="input-group">
               <span class="send-text input-group-addon">You send</span>
-              <input type="text" name="amount" class="form-control send-amount" ng-model="transfer.amount"
-                     placeholder="Amount to transfer">
-            <span class="input-group-addon btn-success">
-              <select ng-model="transfer.senderCurrency">
-                <option value="EUR">EUR</option>
-                <option value="USK">GBP</option>
-                <option value="GDP">SEK</option>
-              </select>
-            </span>
+              <input type="integer" name="amount" class="form-control send-amount" ng-model="transfer.amount"
+                     placeholder="Amount to transfer" min="0" max="1000" integer>
+
+              <span class="input-group-addon btn-success">
+                <select ng-model="transfer.senderCurrency">
+                  <option value="EUR">EUR</option>
+                  <option value="USK">GBP</option>
+                  <option value="GDP">SEK</option>
+                </select>
+              </span>
             </div>
 
             <div class="via">and send this link to the receiver</div>
