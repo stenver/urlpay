@@ -52,9 +52,15 @@ function validateForm() {
     }
 }
 
-$("#transferSubmit").click(function(){
-    if (validateForm() == true) {
-        $(".show-input").hide();
-        $(".show-thank-you").show();
-    };
+$( document ).ready(function() {
+    $(".show-thank-you").hide();
+
+    $("#transferSubmit").click(function(){
+        if (validateForm() == true) {
+            $(".show-input").hide();
+            $(".show-thank-you").show();
+        };
+    });
 });
+
+
