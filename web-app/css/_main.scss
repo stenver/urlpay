@@ -180,6 +180,16 @@ a:link, a:visited {
 			border-radius: 4px;
 		}
 	}
+
+	input:required:invalid, input:focus:invalid {
+		/* insert your own styles for invalid form input */
+		-moz-box-shadow: none;
+		background: red;
+	}
+	input:required:valid {
+		/* insert your own styles for valid form input */
+		background: green;
+	}
 }
 
 .footer-container {

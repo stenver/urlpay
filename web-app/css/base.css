@@ -358,6 +358,13 @@ a:link, a:visited {
     margin-right: 1em;
     background: rgba(255, 255, 255, 0.4);
     border-radius: 4px; }
+.receive-main input:required:invalid, .receive-main input:focus:invalid {
+  /* insert your own styles for invalid form input */
+  -moz-box-shadow: none;
+  background: red; }
+.receive-main input:required:valid {
+  /* insert your own styles for valid form input */
+  background: green; }
 
 .footer-container {
   max-width: 1280px;
