@@ -38,11 +38,14 @@
 
             <div class="via-link">
               <span>{{transferUrl}}</span>
-              <button clip-copy="getTransferUrl()" type="button" class="via-copy btn btn-default "
+              <button clip-copy="getTransferUrl()" clip-click="getClickMessage()" type="button" class="via-copy btn btn-default "
                       aria-expanded="false" data-toggle="tooltip" data-placement="right" title="Copy to clipboard">
                 Copy
               </button>
+
             </div>
+            <span ng-hide="copied"><br/></span>
+            <span class="show-copied" ng-show="copied">Link copied!</span>
 
             <div class="tabpanel" role="tabpanel">
               <!-- Nav tabs -->
@@ -111,11 +114,14 @@
                           Remember to send the following transfer link to receiver
                           <div class="via-link">
                             <span>{{ transferUrl }}</span>
-                            <button clip-copy="getTransferUrl()" type="button" class="via-copy btn btn-default "
+                            <button clip-copy="getTransferUrl()" clip-click="getClickMessage()" type="button" class="via-copy btn btn-default "
                                     aria-expanded="false">
                               Copy
                             </button>
                           </div>
+
+                          <span ng-hide="copied"><br/></span>
+                          <span class="show-copied" ng-show="copied">Link copied!</span>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="reloadPage()">Close</button>
