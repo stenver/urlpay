@@ -22,9 +22,13 @@ app.controller('ReceiveController', function ($scope, $http, $location, $state) 
       return false;
     }
     else {
-      $scope.introtext = true;
-      console.log("Transfer done!");
-      return data;
+      $http.put("/transfer", transfer).success(function(data){
+        $scope.introtext = true;
+        console.log("Transfer done!");
+        return data;
+      }).error(function(err){
+        console.log(err);
+      });
     }
   }
 });
