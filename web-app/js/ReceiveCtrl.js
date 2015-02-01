@@ -1,6 +1,7 @@
 var app = angular.module('UrlPay');
 
 app.controller('ReceiveController', function ($scope, $http, $location, $state) {
+  $scope.introtext = false;
   $scope.transfer = {
       receiverAccount: ''
   };
@@ -16,6 +17,7 @@ app.controller('ReceiveController', function ($scope, $http, $location, $state) 
   $scope.receive = function() {
     var transfer = $scope.transfer;
     $http.put("/transfer", transfer).success(function(data){
+      $scope.introtext = true;
       console.log("Transfer done!");
       return data;
     }).error(function(err){
