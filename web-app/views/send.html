@@ -34,7 +34,7 @@
             <div class="via">and send this link to the receiver</div>
 
             <div class="via-link">
-              <span>{{ origin }}{{transfer.urlHash}}</span>
+              <span>{{transferUrl}}</span>
               <button clip-copy="getTransferUrl()" type="button" class="via-copy btn btn-default "
                       aria-expanded="false" data-toggle="tooltip" data-placement="right" title="Copy to clipboard">
                 Copy
@@ -107,7 +107,7 @@
                         <div class="modal-body">
                           Remember to send the following transfer link to receiver
                           <div class="via-link">
-                            <span>{{ origin }}{{transfer.urlHash}}</span>
+                            <span>{{ transferUrl }}</span>
                             <button clip-copy="getTransferUrl()" type="button" class="via-copy btn btn-default "
                                     aria-expanded="false">
                               Copy

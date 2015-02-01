@@ -7,7 +7,7 @@ class UrlMappings {
             }
         }
 
-        "/"(view:"/index")
+        "/"(uri:"/index.html")
         "/transfer" {
             controller = "transfer"
             action = [POST: "send", PUT: "receive"]

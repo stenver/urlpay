@@ -21,11 +21,10 @@ app.controller('SenderController', function ($scope, $http, SendService, $window
     senderTransfered: true
   };
 
-  $scope.origin = window.location.origin + '/';
+  $scope.transferUrl = "http://" + window.location.host + "/index.html#/receive/" + $scope.transfer.urlHash;
 
   $scope.getTransferUrl = function () {
-    var domainUrl = "http://" + window.location.host + "/index.html#/receive/";
-    return domainUrl + $scope.transfer.urlHash;
+    return $scope.transferUrl;
   };
 
   $scope.reloadPage = function() {
