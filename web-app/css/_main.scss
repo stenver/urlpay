@@ -198,6 +198,13 @@ a:link, a:visited {
 		box-shadow: 0 0 4px #5cd053;
 		border-color: #28921f;
 	}
+
+	.show-input {
+		display: block;
+	}
+	.show-thank-you {
+		display: none;
+	}
 }
 
 .footer-container {

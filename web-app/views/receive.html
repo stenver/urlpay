@@ -12,23 +12,29 @@
     <div class="block-group">
 
       <div class="receive-main block">
-        <h1>Somebody wants to send you money via URL<strong>pay</strong>. Enter your bank account IBAN and currency below to finish the transfer.</h1>
-        <form name="receiveForm" role="form" class="receive-form" onsubmit="return validateForm()">
-          <div class="form-group">
-            <div class="input-group">
-              <input type="text" name="receiveInputIban" placeholder="Your bank account IBAN" class="form-control receive-iban"
-                     id="receiverIban" ng-model="transfer.receiverAccount" >
-              <span class="input-group-addon">
-                <select ng-model="transfer.receiverCurrency">
-                  <option value="EUR">EUR</option>
-                  <option value="USK">USK</option>
-                  <option value="GDP">GDP</option>
-                </select>
-              </span>
-            </div>
-            <button type="submit" class="btn btn-success receive-button" ng-click="receive()">Finish transfer!</button>
-          </div>
-        </form>
+        <div class="show-input">
+	        <h1>Somebody wants to send you money via URL<strong>pay</strong>. Enter your bank account IBAN and currency below to finish the transfer.</h1>
+	        <form name="receiveForm" role="form" class="receive-form" onsubmit="return validateForm()">
+	          <div class="form-group">
+	            <div class="input-group">
+	              <input type="text" name="receiveInputIban" placeholder="Your bank account IBAN" class="form-control receive-iban"
+	                     id="receiverIban" ng-model="transfer.receiverAccount" required 
+	                     pattern="[a-zA-Z]{2}[0-9]{2}[a-zA-Z0-9]{4}[0-9]{7}([a-zA-Z0-9]?){0,16}">
+	              <span class="input-group-addon">
+	                <select ng-model="transfer.receiverCurrency">
+	                  <option value="EUR">EUR</option>
+	                  <option value="USK">USK</option>
+	                  <option value="GDP">GDP</option>
+	                </select>
+	              </span>
+	            </div>
+	            <button id="transferSubmit" type="submit" class="btn btn-success receive-button" ng-click="receive()">Finish transfer!</button>
+	          </div>
+	        </form>
+		</div>
+		<div class="show-thank-you">
+			<h1>Thank you for using URL<strong>pay</strong>! The transfer will take place in the next 30 min. To send someone money, please go to our <a href="http://localhost:8080/index.html#/send">homepage</a>.</h1>
+		</div>
       </div>
 
     </div>

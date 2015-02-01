@@ -372,6 +372,10 @@ a:link, a:visited {
   /* insert your own styles for valid form input */
   box-shadow: 0 0 4px #5cd053;
   border-color: #28921f; }
+.receive-main .show-input {
+  display: block; }
+.receive-main .show-thank-you {
+  display: none; }
 
 .footer-container {
   max-width: 1280px;

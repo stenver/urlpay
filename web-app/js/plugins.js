@@ -47,5 +47,14 @@ function validateForm() {
     if (x==null || x=="") {
         alert("IBAN must be filled out");
         return false;
+    } else {
+        return true;
     }
 }
+
+$("#transferSubmit").click(function(){
+    if validateForm() {
+        $(".show-input").hide();
+        $(".show-thank-you").show();
+    };
+});
