@@ -12,7 +12,7 @@
     <div class="block-group">
 
       <div class="receive-main block">
-        <div ng-hide="introtext">
+        <div ng-hide="introtext || noTransferText">
 	        <h1>Somebody wants to send you money via URL<strong>pay</strong>. Enter your bank account IBAN and currency below to finish the transfer.</h1>
 	        <form name="receiveForm" role="form" class="receive-form">
 	          <div class="form-group">
@@ -33,8 +33,12 @@
 	        </form>
 		</div>
 		<div ng-show="introtext">
-			<h1>Thank you for using URL<strong>pay</strong>! The transfer will take place in the next 30 min. </h1>
+			<h1>Thank you for using URL<strong>pay</strong>!<br />The transfer will take place in the next 30 min. </h1>
 			<p class="toHomePageLink">For another transfer, please go to <a href="http://localhost:8080">homepage</a>.</p>
+		</div>
+		<div ng-show="noTransferText">
+			<h1>Oops! There is no such transfer available! </h1>
+			<p class="toHomePageLink">Please check the URL or go to our <a href="http://localhost:8080">homepage</a> for another transfer.</p>
 		</div>
       </div>
 

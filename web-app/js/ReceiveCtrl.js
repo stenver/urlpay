@@ -2,6 +2,7 @@ var app = angular.module('UrlPay');
 
 app.controller('ReceiveController', function ($scope, $http, $location, $state) {
   $scope.introtext = false;
+  $scope.noTransferText = false;
   $scope.transfer = {
       receiverAccount: ''
   };
@@ -9,8 +10,9 @@ app.controller('ReceiveController', function ($scope, $http, $location, $state) 
   $http.get("/transfer/" + $state.params.urlhash)
     .success(function(data) {
       $scope.transfer = data;
-      console.log("Got transfer!", data);
+      console.log("Receiver active!", data);
     }).error(function(err){
+      $scope.noTransferText = true;
       console.log(err);
     });
 
