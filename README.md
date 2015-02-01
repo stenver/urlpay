@@ -1,4 +1,4 @@
-tw-challenge-2014
+URLPay repository
 =================
 
-Base repository for TransferWise Challenge - please fork for each team and make repository public. Sharing is caring!
+Base repository for URLPay.
