@@ -16,7 +16,7 @@ app.controller('ReceiveController', function ($scope, $http, $location, $state) 
 
   $scope.receive = function() {
     var transfer = $scope.transfer;
-    var inputvalue = $scope.receiveInputIban;
+    var inputvalue = document.forms["receiveForm"]["receiveInputIban"].value;
     if (inputvalue==null || inputvalue=="") {
       alert("IBAN must be filled out");
       return false;
