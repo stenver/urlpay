@@ -21,8 +21,10 @@ app.controller('SenderController', function ($scope, $http, SendService, $window
     senderTransfered: true
   };
 
+  $scope.origin = window.location.origin + '/';
+
   $scope.getTransferUrl = function () {
-    var domainUrl = "http://localhost:8080/app/sender.html#/receive/";
+    var domainUrl = "http://" + window.location.host + "/index.html#/receive/";
     return domainUrl + $scope.transfer.urlHash;
   };
 
@@ -33,28 +35,6 @@ app.controller('SenderController', function ($scope, $http, SendService, $window
   };
 
   $scope.sendBtn = function () {
-    var transfer = $scope.transfer;
-    var data = {
-      receiver: {
-        amount: transfer.amount,
-        urlhash: transfer.urlhash,
-        receiverAccount: transfer.senderCurrency,
-        cardType: transfer.cardType,
-        country: transfer.country,
-        firstName: transfer.firstName,
-        lastName: transfer.lastName,
-        currency: transfer.receiverCurrency
-      }
-    };
-    
-    $http.get("http://challenge.transferwise.com/?teamname=wearegoingtolondon&data=" + JSON.stringify(data))
-      .success(function (data) {
-        console.log("Message sent to transferwire");
-      }).error(function (err) {
-        console.log(err);
-      });
-
-    console.log('sending');
     SendService.transfer($scope.transfer, function () {
       console.log('Transfer done');
     }, function (err) {

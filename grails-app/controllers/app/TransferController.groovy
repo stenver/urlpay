@@ -15,7 +15,6 @@ class TransferController {
 
     def receive(){
         Transfer transfer = Transfer.findByUrlHash(request.JSON["urlHash"])
-        transfer.properties = request
         transfer.receiverTransfered = true;
         transfer.receiverCurrency = request.JSON["receiverCurrency"]
         transfer.receiverAccount = request.JSON["receiverAccount"]

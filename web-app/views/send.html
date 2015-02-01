@@ -34,7 +34,7 @@
             <div class="via">and send this link to the receiver</div>
 
             <div class="via-link">
-              <span>http://urlpay.com/{{transfer.urlHash}}</span>
+              <span>{{ origin }}{{transfer.urlHash}}</span>
               <button clip-copy="getTransferUrl()" type="button" class="via-copy btn btn-default "
                       aria-expanded="false" data-toggle="tooltip" data-placement="right" title="Copy to clipboard">
                 Copy
@@ -53,7 +53,7 @@
               <!-- Tab panes -->
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="creditCard"><p>Insert credit card details to finish the
-                  easy transfer process. A total amount of <span class="amountToSend">{{transfer.amount * 1.005 | currency }}</span><span
+                  easy transfer process. A total amount of <span class="amountToSend">{{transfer.amount * 1.01 }}</span><span
                     class="amountDeclare">*</span> <span
                     style="text-transform: uppercase">{{transfer.senderCurrency}}</span> will be taken from your credit
                   card account.</p>
@@ -107,7 +107,7 @@
                         <div class="modal-body">
                           Remember to send the following transfer link to receiver
                           <div class="via-link">
-                            <span>http://transfer.easy/{{transfer.urlHash}}</span>
+                            <span>{{ origin }}{{transfer.urlHash}}</span>
                             <button clip-copy="getTransferUrl()" type="button" class="via-copy btn btn-default "
                                     aria-expanded="false">
                               Copy
@@ -128,13 +128,13 @@
                 </div>
 
                 <div role="tabpanel" class="tab-pane" id="bankTransfer">
-                  <p>Transfer <span class="amountToSend">{{transfer.amount * 1.005 | currency }}</span><span
+                  <p>Transfer <span class="amountToSend">{{transfer.amount * 1.01 }}</span><span
                     class="amountDeclare">*</span> <span
                     style="text-transform: uppercase">{{transfer.senderCurrency}}</span> to your local
                     URLpay bank account below to finish the process.</p>
 
-                  <p>IBAN: EE00 0000 0000 0000 0000</p>
-                  <p>Reference number: 123123214</p>
+                  <p>IBAN: EE691010010638748015</p>
+                  <p>Receiver: URLPay OÜ</p>
 
                   <div class="footNote">
                     <span class="amountDeclare">*</span>We would love to transfer your money free of charge, but hate
