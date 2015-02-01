@@ -16,12 +16,15 @@ app.controller('ReceiveController', function ($scope, $http, $location, $state) 
 
   $scope.receive = function() {
     var transfer = $scope.transfer;
-    $http.put("/transfer", transfer).success(function(data){
+    var inputvalue = $scope.receiveInputIban;
+    if (inputvalue==null || inputvalue=="") {
+      alert("IBAN must be filled out");
+      return false;
+    }
+    else {
       $scope.introtext = true;
       console.log("Transfer done!");
       return data;
-    }).error(function(err){
-      console.log(err);
-    });
+    }
   }
 });
