@@ -366,12 +366,12 @@ a:link, a:visited {
 .receive-main input:focus:invalid {
   /* insert your own styles for invalid form input */
   -moz-box-shadow: none;
-  box-shadow: 0 0 5px #d45252;
-  border-color: rgba(198, 54, 54, 0.5); }
+  box-shadow: 0 0 4px #d45252;
+  border-color: #b03535; }
 .receive-main input:required:valid {
   /* insert your own styles for valid form input */
-  box-shadow: 0 0 5px #5cd053;
-  border-color: rgba(45, 178, 34, 0.5); }
+  box-shadow: 0 0 4px #5cd053;
+  border-color: #28921f; }
 
 .footer-container {
   max-width: 1280px;
