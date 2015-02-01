@@ -372,11 +372,14 @@ a:link, a:visited {
   /* insert your own styles for valid form input */
   box-shadow: 0 0 4px #5cd053;
   border-color: #28921f; }
+.receive-main .toHomePageLink {
+  text-align: center;
+  font-size: 2em; }
 .receive-main .toHomePageLink:visited, .receive-main .toHomePageLink:link {
-  color: #000000;
+  color: #0e8140;
   text-decoration: none; }
 .receive-main .toHomePageLink:hover, .receive-main .toHomePageLink:active {
-  color: #0e8140;
+  color: black;
   text-decoration: none; }
 
 .footer-container {

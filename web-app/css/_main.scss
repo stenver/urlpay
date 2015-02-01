@@ -198,13 +198,16 @@ a:link, a:visited {
 		box-shadow: 0 0 4px #5cd053;
 		border-color: #28921f;
 	}
-
+	.toHomePageLink {
+		text-align: center;
+		font-size: 2em;
+	}
 	.toHomePageLink:visited, .toHomePageLink:link {
-		color: #000000;
+		color: #0e8140;
 		text-decoration: none;
 	}
 	.toHomePageLink:hover, .toHomePageLink:active {
-		color: #0e8140;
+		color: rgb(0,0,0);
 		text-decoration: none;
 	}
 }
