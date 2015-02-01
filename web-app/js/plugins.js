@@ -41,7 +41,7 @@ if(!supports_input_placeholder()) {
     }
 }
 
-// js form validation
+/*/ js form validation
 function validateForm() {
     var x = document.forms["receiveForm"]["receiveInputIban"].value;
     if (x==null || x=="") {
@@ -49,5 +49,4 @@ function validateForm() {
         return false;
     }
 }
-
-
+*/
